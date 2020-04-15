@@ -1,6 +1,7 @@
 from googlemaps import Client as GoogleMaps
 import pandas as pd
 
+
 # src_addr and dst_addr is a string form of an address. e.g. "Temple University", "Temple University Tech Center", etc.
 def getLatLng(src_addr,dst_addr, gmaps):
     
@@ -55,7 +56,7 @@ def main():
     distance, duration = getLatLng(src_addr,dst_addr, gmaps)
     print(distance)
     print(duration)
-    
+
     
     """
     TODO:
