@@ -5,8 +5,10 @@ import os
 
 distdurCache = cache.exports()
 
-keyfile = "MAP_KEY"
+MAP_KEY = os.environ['key']
+"""
 MAP_KEY = ''
+keyfile = "MAP_KEY"
 
 # Setup GoogleMaps before start
 try:
@@ -20,6 +22,7 @@ try:
 except ValueError:
     print('Invalid API key provided. Exit the program.')
     exit()
+"""
 
 
 def lambda_handler(event, context):
@@ -194,17 +197,14 @@ def dist_dur(src,dst):
         dist, dur = distdurCache[cacheKey]
     else:
         distance, duration = getLatLng(src_addr,dst_addr)
+       
         dist = distance['text']
         dur = duration['text']
         dur = durationFormat(dur)
         
         # add to cache
         distdurCache[cacheKey] = [dist,dur]
-    
-    
-    
-    # No cache
-    
+        print("distdurCache :", distdurCache)
 
     return dist,dur
 
