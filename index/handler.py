@@ -204,7 +204,7 @@ def dist_dur(src,dst):
         
         # add to cache
         distdurCache[cacheKey] = [dist,dur]
-        print("distdurCache :", distdurCache)
+        #print("distdurCache :", distdurCache)
 
     return dist,dur
 
