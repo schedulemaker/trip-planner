@@ -8,8 +8,8 @@ def exports():
         import os
     if 'GoogleMaps' not in local and 'GoogleMaps' not in globa:
         from googlemaps import Client as GoogleMaps
-    if 'pd' not in local and 'pd' not in globa:
-        import pandas as pd
+    #if 'pd' not in local and 'pd' not in globa:
+    #    import pandas as pd
 
 
-    return distdurCache, os, GoogleMaps, pd
+    return distdurCache, os, GoogleMaps

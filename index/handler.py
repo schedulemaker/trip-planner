@@ -1,9 +1,8 @@
 import cache
-from googlemaps import Client as GoogleMaps
-import pandas as pd
-import os
+#from googlemaps import Client as GoogleMaps
+#import os
 
-distdurCache = cache.exports()
+distdurCache, os, GoogleMaps = cache.exports()
 
 MAP_KEY = os.environ['MAP_KEY']
 
