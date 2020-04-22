@@ -1,7 +1,9 @@
-import handler
 import os
+os.environ['MAP_KEY'] = None
+import handler
 os.environ['university'] = 'temple university'
-os.environ['key'] =None
+
+
 event = {'schedule': [
   [
     {

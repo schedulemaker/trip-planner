@@ -1,11 +1,11 @@
 import cache
-from googlemaps import Client as GoogleMaps
-import pandas as pd
-import os
+#from googlemaps import Client as GoogleMaps
+#import os
 
-distdurCache = cache.exports()
+distdurCache, os, GoogleMaps = cache.exports()
 
-MAP_KEY = os.environ['key']
+MAP_KEY = os.environ['MAP_KEY']
+
 """
 MAP_KEY = ''
 keyfile = "MAP_KEY"
@@ -17,12 +17,13 @@ try:
 except FileNotFoundError:
     print('API key file does not exist. Exit the program.')
     exit()
+"""
 try:
     gmaps = GoogleMaps(MAP_KEY)
 except ValueError:
     print('Invalid API key provided. Exit the program.')
     exit()
-"""
+
 
 
 def lambda_handler(event, context):
